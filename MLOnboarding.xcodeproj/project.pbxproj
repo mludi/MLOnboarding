@@ -10,7 +10,6 @@
 		39F9BAEC1BE8D82600161C1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BAEB1BE8D82600161C1E /* main.m */; };
 		39F9BAEF1BE8D82600161C1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BAEE1BE8D82600161C1E /* AppDelegate.m */; };
 		39F9BAF21BE8D82600161C1E /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BAF11BE8D82600161C1E /* OnboardingContentViewController.m */; };
-		39F9BAF81BE8D82600161C1E /* MLOnboarding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BAF61BE8D82600161C1E /* MLOnboarding.xcdatamodeld */; };
 		39F9BAFA1BE8D82600161C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F9BAF91BE8D82600161C1E /* Assets.xcassets */; };
 		39F9BAFD1BE8D82600161C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F9BAFB1BE8D82600161C1E /* LaunchScreen.storyboard */; };
 		39F9BB081BE8D82600161C1E /* MLOnboardingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BB071BE8D82600161C1E /* MLOnboardingTests.m */; };
@@ -42,7 +41,6 @@
 		39F9BAEE1BE8D82600161C1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		39F9BAF01BE8D82600161C1E /* OnboardingContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnboardingContentViewController.h; sourceTree = "<group>"; };
 		39F9BAF11BE8D82600161C1E /* OnboardingContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnboardingContentViewController.m; sourceTree = "<group>"; };
-		39F9BAF71BE8D82600161C1E /* MLOnboarding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MLOnboarding.xcdatamodel; sourceTree = "<group>"; };
 		39F9BAF91BE8D82600161C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39F9BAFC1BE8D82600161C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39F9BAFE1BE8D82600161C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				39F9BAF91BE8D82600161C1E /* Assets.xcassets */,
 				39F9BAFB1BE8D82600161C1E /* LaunchScreen.storyboard */,
 				39F9BAFE1BE8D82600161C1E /* Info.plist */,
-				39F9BAF61BE8D82600161C1E /* MLOnboarding.xcdatamodeld */,
 				39F9BAEA1BE8D82600161C1E /* Supporting Files */,
 			);
 			path = MLOnboarding;
@@ -275,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				39F9BAF21BE8D82600161C1E /* OnboardingContentViewController.m in Sources */,
-				39F9BAF81BE8D82600161C1E /* MLOnboarding.xcdatamodeld in Sources */,
 				39F9BAEF1BE8D82600161C1E /* AppDelegate.m in Sources */,
 				39F9BB221BE8D9F800161C1E /* OnboardingViewController.m in Sources */,
 				39F9BAEC1BE8D82600161C1E /* main.m in Sources */,
@@ -517,19 +513,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		39F9BAF61BE8D82600161C1E /* MLOnboarding.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				39F9BAF71BE8D82600161C1E /* MLOnboarding.xcdatamodel */,
-			);
-			currentVersion = 39F9BAF71BE8D82600161C1E /* MLOnboarding.xcdatamodel */;
-			path = MLOnboarding.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 39F9BADF1BE8D82600161C1E /* Project object */;
 }
