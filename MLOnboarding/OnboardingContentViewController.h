@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface OnboardingContentViewController : UIViewController
-@property (assign, nonatomic) NSInteger index;
+
+- (instancetype)initWithTitle:(NSString *)inTitle;
+
 @end
 

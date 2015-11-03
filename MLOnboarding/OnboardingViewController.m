@@ -12,7 +12,7 @@
 
 @interface OnboardingViewController ()<UIPageViewControllerDataSource>
 @property (nonatomic, strong) UIPageViewController *pageViewController;
-@property (nonatomic, strong) NSArray *viewControllers;
+@property (nonatomic, strong) NSArray *theViewControllers;
 @end
 
 @implementation OnboardingViewController
@@ -23,16 +23,20 @@
     
     [super viewDidLoad];
     
+    
     self.view.backgroundColor = [UIColor darkGrayColor];
     
-    OnboardingContentViewController *initialViewController = [self viewControllerAtIndex:0];
+    OnboardingContentViewController *firstViewController = [[OnboardingContentViewController alloc] initWithTitle:@"Content Controller 1"];
+    OnboardingContentViewController *secondViewController = [[OnboardingContentViewController alloc] initWithTitle:@"Content Controller 2"];
+    OnboardingContentViewController *thirdViewController = [[OnboardingContentViewController alloc] initWithTitle:@"Content Controller 3"];
+    self.theViewControllers = @[firstViewController, secondViewController, thirdViewController];
     
-    NSArray *viewControllers = @[initialViewController];
+    NSAssert([self.theViewControllers count] >= 1, @"1 Controller is required");
     
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     
     self.pageViewController.dataSource = self;
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [self.pageViewController setViewControllers:@[self.theViewControllers[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
@@ -45,47 +49,42 @@
     [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[pageViewController]|" options:kNilOptions metrics:nil views:views]];
 }
 
-#pragma mark - Helper
-- (OnboardingContentViewController *)viewControllerAtIndex:(NSUInteger)index {
-    
-    OnboardingContentViewController *childViewController = [[OnboardingContentViewController alloc] init];
-    childViewController.index = index;
-    
-    return childViewController;
-    
-}
 
 #pragma mark - UIPageViewControllerDataSource
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    OnboardingContentViewController *onboardingContentViewController = (OnboardingContentViewController *)viewController;
-    NSUInteger index = onboardingContentViewController.index;
-    if (index == 0) {
+
+    if (!viewController) {
+        return self.theViewControllers[0];
+    }
+    NSUInteger index = [self.theViewControllers indexOfObject:viewController];
+    NSParameterAssert(index != NSNotFound);
+    if (index <= 0) {
         return nil;
     }
+    // return previous controller
+    return self.theViewControllers[index - 1];
+    
 
-    index--;
-    
-    return [self viewControllerAtIndex:index];
-    
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    OnboardingContentViewController *onboardingContentViewController = (OnboardingContentViewController *)viewController;
-    NSUInteger index = onboardingContentViewController.index;
-    
-    index++;
-    
-    if (index == 5) {
+    if (!viewController) {
+        return self.theViewControllers[0];
+    }
+    NSUInteger index = [self.theViewControllers indexOfObject:viewController];
+    NSParameterAssert(index != NSNotFound);
+    if (index >= [self.theViewControllers count] - 1) {
+        // we're at the end of the self.theViewControllers array
         return nil;
     }
-    
-    return [self viewControllerAtIndex:index];
+    // return next controller
+    return self.theViewControllers[index + 1];
     
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
-    return 5;
+    return [self.theViewControllers count];
 }
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
