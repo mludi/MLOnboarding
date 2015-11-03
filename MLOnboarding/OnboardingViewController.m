@@ -34,7 +34,7 @@
     NSAssert([self.theViewControllers count] >= 1, @"1 Controller is required");
     
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    
+    self.pageViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
     self.pageViewController.dataSource = self;
     [self.pageViewController setViewControllers:@[self.theViewControllers[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
