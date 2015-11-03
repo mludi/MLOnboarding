@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		39F9BAEC1BE8D82600161C1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BAEB1BE8D82600161C1E /* main.m */; };
 		39F9BAEF1BE8D82600161C1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BAEE1BE8D82600161C1E /* AppDelegate.m */; };
-		39F9BAF21BE8D82600161C1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BAF11BE8D82600161C1E /* ViewController.m */; };
-		39F9BAF51BE8D82600161C1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F9BAF31BE8D82600161C1E /* Main.storyboard */; };
+		39F9BAF21BE8D82600161C1E /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BAF11BE8D82600161C1E /* OnboardingContentViewController.m */; };
 		39F9BAF81BE8D82600161C1E /* MLOnboarding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BAF61BE8D82600161C1E /* MLOnboarding.xcdatamodeld */; };
 		39F9BAFA1BE8D82600161C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39F9BAF91BE8D82600161C1E /* Assets.xcassets */; };
 		39F9BAFD1BE8D82600161C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F9BAFB1BE8D82600161C1E /* LaunchScreen.storyboard */; };
 		39F9BB081BE8D82600161C1E /* MLOnboardingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BB071BE8D82600161C1E /* MLOnboardingTests.m */; };
 		39F9BB131BE8D82600161C1E /* MLOnboardingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BB121BE8D82600161C1E /* MLOnboardingUITests.m */; };
+		39F9BB221BE8D9F800161C1E /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F9BB211BE8D9F800161C1E /* OnboardingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +40,8 @@
 		39F9BAEB1BE8D82600161C1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39F9BAED1BE8D82600161C1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		39F9BAEE1BE8D82600161C1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		39F9BAF01BE8D82600161C1E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		39F9BAF11BE8D82600161C1E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		39F9BAF41BE8D82600161C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		39F9BAF01BE8D82600161C1E /* OnboardingContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnboardingContentViewController.h; sourceTree = "<group>"; };
+		39F9BAF11BE8D82600161C1E /* OnboardingContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnboardingContentViewController.m; sourceTree = "<group>"; };
 		39F9BAF71BE8D82600161C1E /* MLOnboarding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MLOnboarding.xcdatamodel; sourceTree = "<group>"; };
 		39F9BAF91BE8D82600161C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39F9BAFC1BE8D82600161C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +52,8 @@
 		39F9BB0E1BE8D82600161C1E /* MLOnboardingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLOnboardingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F9BB121BE8D82600161C1E /* MLOnboardingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLOnboardingUITests.m; sourceTree = "<group>"; };
 		39F9BB141BE8D82600161C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39F9BB201BE8D9F800161C1E /* OnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingViewController.h; sourceTree = "<group>"; };
+		39F9BB211BE8D9F800161C1E /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +106,10 @@
 			children = (
 				39F9BAED1BE8D82600161C1E /* AppDelegate.h */,
 				39F9BAEE1BE8D82600161C1E /* AppDelegate.m */,
-				39F9BAF01BE8D82600161C1E /* ViewController.h */,
-				39F9BAF11BE8D82600161C1E /* ViewController.m */,
-				39F9BAF31BE8D82600161C1E /* Main.storyboard */,
+				39F9BB201BE8D9F800161C1E /* OnboardingViewController.h */,
+				39F9BB211BE8D9F800161C1E /* OnboardingViewController.m */,
+				39F9BAF01BE8D82600161C1E /* OnboardingContentViewController.h */,
+				39F9BAF11BE8D82600161C1E /* OnboardingContentViewController.m */,
 				39F9BAF91BE8D82600161C1E /* Assets.xcassets */,
 				39F9BAFB1BE8D82600161C1E /* LaunchScreen.storyboard */,
 				39F9BAFE1BE8D82600161C1E /* Info.plist */,
@@ -248,7 +250,6 @@
 			files = (
 				39F9BAFD1BE8D82600161C1E /* LaunchScreen.storyboard in Resources */,
 				39F9BAFA1BE8D82600161C1E /* Assets.xcassets in Resources */,
-				39F9BAF51BE8D82600161C1E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39F9BAF21BE8D82600161C1E /* ViewController.m in Sources */,
+				39F9BAF21BE8D82600161C1E /* OnboardingContentViewController.m in Sources */,
 				39F9BAF81BE8D82600161C1E /* MLOnboarding.xcdatamodeld in Sources */,
 				39F9BAEF1BE8D82600161C1E /* AppDelegate.m in Sources */,
+				39F9BB221BE8D9F800161C1E /* OnboardingViewController.m in Sources */,
 				39F9BAEC1BE8D82600161C1E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,14 +314,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		39F9BAF31BE8D82600161C1E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				39F9BAF41BE8D82600161C1E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		39F9BAFB1BE8D82600161C1E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

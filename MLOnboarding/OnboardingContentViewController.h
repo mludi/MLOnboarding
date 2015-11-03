@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface OnboardingContentViewController : UIViewController
+@property (assign, nonatomic) NSInteger index;
 @end
 
